@@ -1,2 +1,24 @@
-# vue-AEcharts-Options
-基于 vue 的 apache Echarts 统计图配置工具
+# vue-aecharts-options
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
