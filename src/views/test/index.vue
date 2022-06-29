@@ -83,11 +83,6 @@ export default {
             this.myChart.setOption(JSON.parse(this.option))
         },
 
-        // 获取配置项：
-        getOption() {
-            console.log(this.option);
-        },
-
     },
     mounted() {
         this.reWrite();

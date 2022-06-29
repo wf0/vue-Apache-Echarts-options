@@ -9,56 +9,72 @@
       <el-button size="mini" @click="toApache('document')" icon="el-icon-tickets">文档</el-button>
       <el-button size="mini" @click="toApache('help')" icon="el-icon-search">帮助</el-button>
       <el-button size="mini" @click="toApache('github')" icon="el-icon-search">Github</el-button>
-      <el-dropdown>
+      <el-dropdown @command="dropdown">
         <span class="el-dropdown-link">
           <el-avatar icon="el-icon-user-solid" :size="30"></el-avatar>
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item >API</el-dropdown-item>
-          <el-dropdown-item >示例</el-dropdown-item>
-          <el-dropdown-item >配置项</el-dropdown-item>
-          <el-dropdown-item >表格工具</el-dropdown-item>
+          <el-dropdown-item command="API">API</el-dropdown-item>
+          <el-dropdown-item command="example">示例</el-dropdown-item>
+          <el-dropdown-item command="options">配置项</el-dropdown-item>
+          <el-dropdown-item command="table">表格工具</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    
+
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      options: [{
-        content: '',
-        value: 'https://echarts.apache.org/zh/api.html#echarts',
-      }, {
-        content: '',
-        value: 'https://echarts.apache.org/examples/zh/index.html',
-      }, {
-        content: '',
-        value: 'https://echarts.apache.org/zh/option.html#title',
-      }, {
-        content: '',
-        value: 'https://echarts.apache.org/zh/spreadsheet.html',
-      }],
-    }
-  },
+  name:"Myheader",
   methods: {
     toApache(type) {
-      console.log(option);
-      // location.href=option.path;
-      window.open(`${option.value}`)
+      switch (type) {
+        case 'document':
+          window.open("https://echarts.apache.org/handbook/zh/get-started/");
+          break;
+        case 'help':
+          window.open("https://echarts.apache.org/zh/faq.html");
+          break;
+        case 'github':
+          window.open("https://github.com/wf0/vue-Apache-Echarts-options");
+          break;
+
+        default:
+          break;
+      }
+    },
+    // 下拉菜单跳转功能
+    dropdown(command) {
+      switch (command) {
+        case "API":
+          window.open("https://echarts.apache.org/zh/api.html#echarts");
+          break;
+        case "example":
+          window.open("https://echarts.apache.org/examples/zh/index.html");
+          break;
+        case "options":
+          window.open("https://echarts.apache.org/zh/option.html#title");
+          break;
+        case "table":
+          window.open("https://echarts.apache.org/zh/spreadsheet.html");
+          break;
+
+        default:
+          break;
+      }
     },
   },
 
 }
 </script>
 <style scoped>
-.el-dropdown{
+.el-dropdown {
   margin: 0 0 0 10px;
 }
+
 .box {
   position: relative;
 }
@@ -76,8 +92,8 @@ export default {
   /* 使用定位+ 偏移实现居中定位 */
   transform: translate(0, -50%);
 }
-.el-avatar{
+
+.el-avatar {
   vertical-align: middle;
 }
-
 </style>
