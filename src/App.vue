@@ -8,7 +8,7 @@
     <div class="container">
       <!-- 左侧导航栏 -->
       <div class="aside">
-        <el-scrollbar style="height:700px">
+        <el-scrollbar style="height:800px">
           <Aside />
         </el-scrollbar>
       </div>
