@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .title {
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     background-image: url("../../assets/BG-logo.png");
     background-repeat: no-repeat;
     background-size: cover;

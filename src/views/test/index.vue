@@ -1,25 +1,32 @@
 <template>
-    <div class="box" style="padding:20px">
-        <div ref="demo" style="width:500px;height:450px"></div>
-        <div>
-            <el-form label-width="80px">
-                <el-form-item label="标题">
-                    <el-input v-model="title"></el-input>
-                </el-form-item>
-                <el-form-item label="显示数据">
-                    <el-switch v-model="showData" active-color="#13ce66" inactive-color="#ff4949">
-                    </el-switch>
-                </el-form-item>
-            </el-form>
-            <el-button @click="getOption=!getOption">显示配置项</el-button>
-            <div v-if="getOption">{{option}}</div>
+    <div style="padding:20px">
+        <Title>测试用例</Title>
+        <div class="box">
+            <div ref="demo" style="width:500px;height:450px;"></div>
+            <div>
+                <el-form label-width=" 80px">
+                    <el-form-item label="标题">
+                        <el-input v-model="title"></el-input>
+                    </el-form-item>
+                    <el-form-item label="显示数据">
+                        <el-switch v-model="showData" active-color="#13ce66" inactive-color="#ff4949">
+                        </el-switch>
+                    </el-form-item>
+                </el-form>
+                <el-button @click="getOption = !getOption">显示配置项</el-button>
+                <div v-if="getOption">{{ option }}</div>
+            </div>
         </div>
+
     </div>
 </template>
 
 <script>
+import Title from "@/components/title"
 import * as echarts from 'echarts';
 export default {
+    name: 'test',
+    components: { Title },
     data() {
         return {
             // 使用变量存储
@@ -27,7 +34,7 @@ export default {
             option: "", // 配置项(这样会变成vue的对象)
             title: '',
             showData: false,
-            getOption:false,
+            getOption: false,
         }
     },
     watch: {
@@ -92,5 +99,6 @@ export default {
 <style scoped>
 .box {
     display: flex;
+    margin-top: 20px;
 }
 </style>
