@@ -2,6 +2,11 @@ import VueRouter from 'vue-router'
 
 const routes = [
     {
+        path: '/test',  //使用帮忙(对应左侧导航栏名字)
+        name: 'test',
+        component: () => import("../views/test/index.vue")
+    },
+    {
         path: '/help',  //使用帮忙(对应左侧导航栏名字)
         name: 'help',
         component: () => import("../views/help.vue")

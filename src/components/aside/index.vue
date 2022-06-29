@@ -1,8 +1,9 @@
 <template>
   <div>
-    <el-menu default-active="help" class="el-menu-vertical-demo" router>
+    <el-menu default-active="test" class="el-menu-vertical-demo" router>
       <el-menu-item-group>
         <span slot="title">开始</span>
+        <el-menu-item index="test" style="color:red;font-weight:900">**测试用**</el-menu-item>
         <el-menu-item index="help">使用帮助</el-menu-item>
         <el-menu-item index="start">快速开始</el-menu-item>
         <el-menu-item index="logs">更新日志</el-menu-item>
