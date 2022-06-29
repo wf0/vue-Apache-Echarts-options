@@ -25,5 +25,6 @@ export default {
     font-size: 40px;
     color: #191919;
     font-family: "PingFang SC";
+    border-bottom: solid #e6e6e6 1px;
 }
 </style>
