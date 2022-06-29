@@ -11,9 +11,18 @@
                             <div ref="demo" style="width:500px;height:450px;"></div>
                         </el-col>
                         <el-col class="border-left pos-re" :span="12">
-                            <el-form label-width=" 80px">
+                            <el-form label-width=" 120px">
                                 <el-form-item label="标题">
                                     <el-input v-model="title"></el-input>
+                                </el-form-item>
+                                <el-form-item label="标题链接">
+                                    <el-input v-model="titleLink"></el-input>
+                                </el-form-item>
+                                <el-form-item label="副标题">
+                                    <el-input v-model="subtext"></el-input>
+                                </el-form-item>
+                                <el-form-item label="标题距左距离">
+                                    <el-input v-model="left"></el-input>
                                 </el-form-item>
                                 <el-form-item label="显示数据">
                                     <el-switch v-model="showData" active-color="#13ce66" inactive-color="#ff4949">
@@ -22,12 +31,12 @@
                             </el-form>
                             <div class="showOption">
                                 <i @click="copyCode" class="el-icon-document-copy"></i>
-                                <i @click="showCOde = !showCOde" class="el-icon-connection"
-                                    :class="{ 'activeI': showCOde }"></i>
+                                <i @click="showCode = !showCode" class="el-icon-connection"
+                                    :class="{ 'activeI': showCode }"></i>
                             </div>
                         </el-col>
                     </el-row>
-                    <el-row v-if="showCOde">
+                    <el-row v-if="showCode">
                         <el-col class="code" :span="24">
                             <code>{{ option }}</code>
                         </el-col>
@@ -38,9 +47,6 @@
                 <el-tab-pane label="指南">角色管理</el-tab-pane>
             </el-tabs>
         </div>
-
-        <!-- 
-         -->
     </div>
 </template>
 
@@ -55,10 +61,13 @@ export default {
             // 使用变量存储
             myChart: null,// 统计图对象
             option: "", // 配置项(这样会变成vue的对象)
-            title: '',
-            showData: false,
-            getOption: false,
-            showCOde: false,
+            title: '',// 标题
+            titleLink: '',// 标题链接
+            subtext: "", // 副标题
+            left: "",// 标题对其方式
+            showData: false,// 是否显示数据
+            // 这个是是否显示代码的
+            showCode: false,
         }
     },
     watch: {
@@ -67,6 +76,18 @@ export default {
             this.reWrite();
         },
         showData() {
+            // 重绘
+            this.reWrite();
+        },
+        titleLink() {
+            // 重绘
+            this.reWrite();
+        },
+        subtext() {
+            // 重绘
+            this.reWrite();
+        },
+        left() {
             // 重绘
             this.reWrite();
         },
@@ -83,7 +104,10 @@ export default {
             // 重新计算配置项对象
             this.option = JSON.stringify({
                 title: {
-                    text: this.title == "" ? 'ECharts 入门示例' : this.title
+                    text: this.title == "" ? 'ECharts 入门示例' : this.title,
+                    link: this.titleLink == "" ? "" : this.titleLink,
+                    subtext: this.subtext == "" ? "" : this.subtext,
+                    left: this.left,
                 },
                 tooltip: {},
                 xAxis: {
@@ -102,6 +126,7 @@ export default {
                     }
                 ]
             })
+
             // 重新绘制统计图
             this.myChart.setOption(JSON.parse(this.option))
         },
@@ -111,7 +136,7 @@ export default {
             // window.clipboardData.setData("Text","copyCode");
             let input = document.createElement('input') // 新增一个input
             input.style.position = 'relative' // 将它隐藏（注意不能使用display或者visibility，否则粘贴不上）
-            input.style.marginLeft="-9999px"
+            input.style.marginLeft = "-9999px"
             input.style.zIndex = '-9'
             document.body.appendChild(input) // 追加
             input.value = this.option; // 设置文本框的内容
@@ -120,7 +145,6 @@ export default {
             console.log("复制完成");
             this.$message.success("复制完成");
         },
-
     },
     mounted() {
         this.reWrite();
