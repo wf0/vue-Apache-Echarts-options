@@ -6,12 +6,11 @@
         alt="logo">
     </div>
     <div class="menu">
-      <el-button size="mini" icon="el-icon-tickets">文档</el-button>
-      <el-button size="mini" icon="el-icon-search">帮助</el-button>
-      <el-button size="mini" icon="el-icon-search">Github</el-button>
+      <el-button size="mini" @click="toApache('document')" icon="el-icon-tickets">文档</el-button>
+      <el-button size="mini" @click="toApache('help')" icon="el-icon-search">帮助</el-button>
+      <el-button size="mini" @click="toApache('github')" icon="el-icon-search">Github</el-button>
       <el-dropdown>
         <span class="el-dropdown-link">
-          <!-- <i class="el-icon-s-operation"></i> -->
           <el-avatar icon="el-icon-user-solid" :size="30"></el-avatar>
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
@@ -47,7 +46,7 @@ export default {
     }
   },
   methods: {
-    clickHandler(option) {
+    toApache(type) {
       console.log(option);
       // location.href=option.path;
       window.open(`${option.value}`)
