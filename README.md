@@ -26,5 +26,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 --- 测试用：
 
 A: 我完成了代码修改
+<<<<<<< HEAD
 
 A:我又修改了，并且不是最新版
+=======
+B: 我也完成了
+>>>>>>> 3dc7acd2903a7f672c1185859dd2e8da6ca14b6b
