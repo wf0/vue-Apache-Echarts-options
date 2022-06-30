@@ -49,7 +49,7 @@ export default {
 .container {
   /* background-color: aqua; */
   display: flex;
-  height: 680px;
+  height: 800px;
 }
 
 .aside {
@@ -64,7 +64,8 @@ export default {
 
 .main {
   /* background-color: #F3F3F3; */
-  height: 80%;
+  height: 800px;
+  overflow: auto;
   /* padding: 20px; */
 }
 

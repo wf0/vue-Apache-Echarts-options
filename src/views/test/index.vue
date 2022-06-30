@@ -69,12 +69,15 @@
                                     </el-switch>
                                 </el-form-item>
                             </el-form>
-                            <div class="showOption">
-                                <i @click="copyCode" class="el-icon-document-copy"></i>
-                                <i @click="showCode = !showCode" class="el-icon-connection"
-                                    :class="{ 'activeI': showCode }"></i>
-                            </div>
+
                         </el-col>
+                    </el-row>
+                    <el-row>
+                        <div class="showOption">
+                            <i @click="copyCode" class="el-icon-document-copy"></i>
+                            <i @click="showCode = !showCode" class="el-icon-connection"
+                                :class="{ 'activeI': showCode }"></i>
+                        </div>
                     </el-row>
                     <el-row v-if="showCode">
                         <el-col class="code" :span="24">
@@ -250,7 +253,6 @@ export default {
 </script>
 
 <style scoped>
-
 .border-left {
     border-left: solid #e6e6e6 1px;
 }
