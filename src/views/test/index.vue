@@ -36,8 +36,12 @@
                                         <el-option value="self">self</el-option>
                                     </el-select>
                                 </el-form-item>
-                                <el-form-item v-if="title||subtext" label="标题距左距离">
+                                <el-form-item v-if="title || subtext" label="标题距左距离">
                                     <el-input v-model.number="left"></el-input>
+                                </el-form-item>
+                                <el-form-item label="提示框">
+                                    <el-switch v-model="tooltip" active-color="#13ce66" inactive-color="#DCDFE6">
+                                    </el-switch>
                                 </el-form-item>
                                 <el-form-item label="显示数据">
                                     <el-switch v-model="showData" active-color="#13ce66" inactive-color="#DCDFE6">
@@ -105,6 +109,7 @@ export default {
             sublink: '',// 副标题链接
             subtarget: 'blank',//副标题链接打开方式
             left: 0,// 距左边的距离
+            tooltip: false,
             showData: false,// 是否显示数据
             dataPosition: 'inside', //数据显示方式
             dataView: false,
@@ -163,6 +168,10 @@ export default {
             // 重绘
             this.reWrite();
         },
+        tooltip() {
+            // 重绘
+            this.reWrite();
+        },
     },
     methods: {
         // 重绘
@@ -172,6 +181,10 @@ export default {
 
             // 重新计算配置项对象
             this.option = JSON.stringify({
+                // 提示框
+                tooltip: {
+                    show: this.tooltip,
+                },
                 // 工具栏
                 toolbox: {
                     show: true,
@@ -181,6 +194,7 @@ export default {
                         saveAsImage: { show: this.saveAsImage }
                     }
                 },
+                // 标题
                 title: {
                     text: this.title == "" ? 'ECharts 入门示例' : this.title,
                     link: this.titleLink,
@@ -190,9 +204,11 @@ export default {
                     suntarget: this.subtarget,
                     left: this.left,
                 },
+                // X轴
                 xAxis: {
                     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
                 },
+                // Y轴
                 yAxis: {},
                 series: [
                     {
