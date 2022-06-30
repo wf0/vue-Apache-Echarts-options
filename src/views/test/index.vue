@@ -275,8 +275,8 @@ export default {
 
 .showOption {
     position: absolute;
-    right: 0%;
-    bottom: 0%;
+    right: 20px;
+    bottom: 10px;
 }
 
 .showOption i {
