@@ -12,22 +12,22 @@ const routes = [{
     {
         path: '/help', //使用帮忙(对应左侧导航栏名字)
         name: 'help',
-        component: () => import("../views/help.vue")
+        component: () => import("../views/help/index.vue")
     },
     {
         path: "/start", //快速开始
         name: 'start',
-        component: () => import("../views/start.vue")
+        component: () => import("../views/start/index.vue")
     },
     {
         path: "/logs", //更新日志
         name: 'logs',
-        component: () => import("../views/logs.vue")
+        component: () => import("../views/logs/index.vue")
     },
     {
         path: "/menu", //功能导航
         name: 'menu',
-        component: () => import("../views/menu.vue")
+        component: () => import("../views/menu/index.vue")
     },
     /**
      * 折线图
