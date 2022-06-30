@@ -21,14 +21,16 @@
           用户需要根据配置项的说明，测试后，达到想要的效果。
         </li>
         <li><strong>但是！我们新增几个需求，要有工具栏、提示框、图例。</strong>用户还是通过查阅配置项手册，实现效果，那这个过程是比较痛苦的。</li>
-        <li style="color:red">=====> <B>但是，使用我们的配置式工具后，一切将变得超级简单：</B></li>
+        <li style="color:red">=====> </li>
+        <li style="color:red"> <B>但是，使用我们的配置工具后，一切将变得超级简单：</B></li>
         <li>
           <img src="../../assets/help_img3.png" alt="" style="height:400px">
         </li>
         <li>
           统计图右侧给出了当前统计图常用的配置项，用户通过输入、点击、选择等方式，即可实时看到统计图效果；还可以通过一键复制实现配置项的复制功能，显示当前配置项功能。
         </li>
-        <li>此为当前demo测试用例，请<el-link type="primary" href="test">前往试试</el-link>。</li>
+        <li>再将复制的配置项粘贴到项目中，即可达到用户想要的效果。</li>
+        <li>此为当前项目测试用例，请<el-link type="primary" href="test">前往试试</el-link>。</li>
       </div>
       <h3>使用说明</h3>
       <div class="content">
