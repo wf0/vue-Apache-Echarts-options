@@ -6,7 +6,7 @@
         alt="logo">
     </div>
     <div class="menu">
-      <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="input2" size="mini" />
+      <el-input placeholder="请输入内容" prefix-icon="el-icon-search" v-model="keyword" size="mini" />
       <el-button size="mini" @click="toApache('document')" icon="el-icon-tickets">文档</el-button>
       <el-button size="mini" @click="toApache('help')" icon="el-icon-search">帮助</el-button>
       <el-button size="mini" @click="toApache('github')" icon="el-icon-search">Github</el-button>
@@ -30,6 +30,11 @@
 <script>
 export default {
   name: "Myheader",
+  data() {
+    return {
+      keyword: '',
+    }
+  },
   methods: {
     toApache(type) {
       switch (type) {
@@ -72,12 +77,13 @@ export default {
 }
 </script>
 <style scoped>
-.el-input{
+.el-input {
   display: inline-block;
   width: 150px;
-  margin: 0 10px 0 0 ;
+  margin: 0 10px 0 0;
 
 }
+
 .el-dropdown {
   margin: 0 0 0 10px;
 }

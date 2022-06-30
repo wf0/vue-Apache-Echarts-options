@@ -1,5 +1,9 @@
 <template>
-<div>堆堆叠渐变面积图</div>
+  <div style="padding:20px">
+    <Title>堆堆叠渐变面积图</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px"></div>
+  </div>
 </template>
 
 <script>

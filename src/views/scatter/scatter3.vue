@@ -1,5 +1,10 @@
 <template>
-<div>线性回归（使用统计插件）</div>
+  <div style="padding:20px">
+    <Title>线性回归（使用统计插件）</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px">
+    </div>
+  </div>
 </template>
 
 <script>

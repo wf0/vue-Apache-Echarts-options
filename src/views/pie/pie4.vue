@@ -1,5 +1,10 @@
 <template>
-<div>基础南丁格尔玫瑰图</div>
+  <div style="padding:20px">
+    <Title>基础南丁格尔玫瑰图</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px">
+    </div>
+  </div>
 </template>
 
 <script>

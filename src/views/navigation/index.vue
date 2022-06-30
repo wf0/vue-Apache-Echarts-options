@@ -1,9 +1,8 @@
 <template>
   <div style="padding:20px">
-    <Title>环形图</Title>
+    <Title>功能导航</Title>
     <!-- 先需要使用tabs -->
-    <div style="margin-top:20px">
-    </div>
+    <div style="margin-top:20px"></div>
   </div>
 </template>
 
@@ -11,9 +10,10 @@
 import Title from "@/components/title"
 import * as echarts from 'echarts';
 export default {
-  name: "pie2",
+  name: "navigation",
   components: { Title },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

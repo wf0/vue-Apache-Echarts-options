@@ -1,5 +1,9 @@
 <template>
-<div>基础 K 线图</div>
+  <div style="padding:20px">
+    <Title>基础 K 线图</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px"></div>
+  </div>
 </template>
 
 <script>
@@ -11,4 +15,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

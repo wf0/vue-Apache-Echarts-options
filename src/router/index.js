@@ -25,9 +25,9 @@ const routes = [{
         component: () => import("../views/logs/index.vue")
     },
     {
-        path: "/menu", //功能导航
-        name: 'menu',
-        component: () => import("../views/menu/index.vue")
+        path: "/navigation", //功能导航
+        name: 'navigation',
+        component: () => import("../views/navigation/index.vue")
     },
     /**
      * 折线图

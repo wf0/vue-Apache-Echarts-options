@@ -7,7 +7,7 @@
         <el-menu-item index="help">使用帮助</el-menu-item>
         <el-menu-item index="start">快速开始</el-menu-item>
         <el-menu-item index="logs">更新日志</el-menu-item>
-        <el-menu-item index="menu">功能导航</el-menu-item>
+        <el-menu-item index="navigation">功能导航</el-menu-item>
       </el-menu-item-group>
 
       <el-menu-item-group title="折线图">
@@ -33,7 +33,7 @@
         <el-menu-item index="pie4">pie-基础南丁格尔玫瑰图</el-menu-item>
       </el-menu-item-group>
 
-      <el-menu-item-group title="散点图">
+      <!-- <el-menu-item-group title="散点图">
         <el-menu-item index="scatter1">scatter-基础散点图</el-menu-item>
         <el-menu-item index="scatter2">scatter-指数回归（使用统计插件）</el-menu-item>
         <el-menu-item index="scatter3">scatter-线性回归（使用统计插件）</el-menu-item>
@@ -48,8 +48,10 @@
         <el-menu-item index="Radar1">Radar-基础雷达图</el-menu-item>
         <el-menu-item index="Radar2">Radar-AQI - 雷达图</el-menu-item>
         <el-menu-item index="Radar3">Radar-多雷达图</el-menu-item>
+      </el-menu-item-group> -->
+      <el-menu-item-group title="更多功能，敬请期待.">
       </el-menu-item-group>
-
+      <!-- 
       <el-menu-item-group title="树图">
       </el-menu-item-group>
       <el-menu-item-group title="旭日图">
@@ -63,7 +65,7 @@
       <el-menu-item-group title="象形柱图">
       </el-menu-item-group>
       <el-menu-item-group title="数据集">
-      </el-menu-item-group>
+      </el-menu-item-group> -->
     </el-menu>
   </div>
 </template>

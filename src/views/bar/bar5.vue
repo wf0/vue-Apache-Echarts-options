@@ -1,5 +1,9 @@
 <template>
-<div>折柱混合</div>
+<div style="padding:20px">
+    <Title>折柱混合</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px"></div>
+  </div>
 </template>
 
 <script>

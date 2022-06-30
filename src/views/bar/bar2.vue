@@ -1,5 +1,9 @@
 <template>
-<div>带背景色的柱状图</div>
+<div style="padding:20px">
+    <Title>带背景色的柱状图</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px"></div>
+  </div>
 </template>
 
 <script>
