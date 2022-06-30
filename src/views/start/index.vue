@@ -1,11 +1,19 @@
 <template>
-<div>快速开始</div>
+  <div style="padding:20px">
+    <Title>快速开始</Title>
+    <!-- 先需要使用tabs -->
+    <div style="margin-top:20px"></div>
+  </div>
 </template>
 
 <script>
+import Title from "@/components/title"
+import * as echarts from 'echarts';
 export default {
   name: "start",
+  components: { Title },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

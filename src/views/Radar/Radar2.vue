@@ -3,8 +3,11 @@
 </template>
 
 <script>
+import Title from "@/components/title"
+import * as echarts from 'echarts';
 export default {
   name: "Radar2",
+  components: { Title },
 };
 </script>
 

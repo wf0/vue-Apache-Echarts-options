@@ -2,7 +2,7 @@
     <div style="padding:20px">
         <Title>测试用例</Title>
         <!-- 先需要使用tabs -->
-        <div class="box">
+        <div style="margin-top:20px">
             <el-tabs type="border-card">
                 <el-tab-pane label="示例">
                     <!-- 使用栅格布局 -->
@@ -250,9 +250,6 @@ export default {
 </script>
 
 <style scoped>
-.box {
-    margin-top: 20px;
-}
 
 .border-left {
     border-left: solid #e6e6e6 1px;
