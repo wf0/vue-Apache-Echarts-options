@@ -8,7 +8,7 @@
           <el-card>
             <h4>项目开发</h4>
             <ul>
-              <li>总结Apache Echarts常用配置项，并提交GIthub</li>
+              <li>总结Apache Echarts常用配置项，并提交Github</li>
               <li>完善Header Search搜索框功能</li>
               <li>完善标题title插槽，并配置插槽内容</li>
               <li>完成帮助页面开发、修复menu命名冲突问题、完善测试用例</li>

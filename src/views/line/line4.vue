@@ -1,6 +1,8 @@
 <template>
   <div style="padding:20px">
-    <Title>堆叠面积图</Title>
+    <Title
+      url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/area-stack.png?_v_=1655181358610">
+      line-堆叠面积图</Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>
@@ -15,4 +17,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

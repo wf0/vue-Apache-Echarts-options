@@ -1,6 +1,9 @@
 <template>
   <div style="padding:20px">
-    <Title>基础折线图</Title>
+    <Title
+      url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/line-simple.png?_v_=1655181358610">
+      line-基础折线图
+    </Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>
@@ -15,4 +18,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
