@@ -6,6 +6,18 @@
       <el-timeline>
         <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">
           <el-card>
+            <h4>Host Fix</h4>
+            <ul>
+              <li>修复navigation Flex布局换行问题</li>
+              <li>修复Title组件props传值，实现图片地址动态切换</li>
+              <li>修复navigation card href链接失效</li>
+              <li>修复测试用例一键复制、配置显示按钮样式</li>
+              <li>修复若干小问题</li>
+            </ul>
+          </el-card>
+        </el-timeline-item>
+        <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">
+          <el-card>
             <h4>项目开发</h4>
             <ul>
               <li>总结Apache Echarts常用配置项，并提交Github</li>
@@ -15,7 +27,6 @@
               <li>完成开始页开发工作</li>
               <li>完成logs开发日志页开发</li>
             </ul>
-
           </el-card>
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-29" placement="top" color="green" size="large">
