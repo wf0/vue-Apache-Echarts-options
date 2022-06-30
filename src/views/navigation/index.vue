@@ -6,7 +6,7 @@
       <h3>折线图</h3>
       <div class="content">
 
-        <a href="">
+        <a href="line1">
           <el-card :body-style="{ padding: '0px' }">
             <img
               src="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/line-simple.png?_v_=1655181358610"
@@ -17,7 +17,7 @@
           </el-card>
         </a>
 
-        <a href="">
+        <a href="line2">
           <el-card :body-style="{ padding: '0px' }">
             <img src="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/line-smooth.png?_v_=1655181358610"
               class="image">
@@ -27,7 +27,7 @@
           </el-card>
         </a>
 
-        <a href="">
+        <a href="line3">
           <el-card :body-style="{ padding: '0px' }">
             <img src="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/area-basic.png?_v_=1655181358610"
               class="image">
@@ -37,7 +37,7 @@
           </el-card>
         </a>
 
-        <a href="">
+        <a href="line4">
           <el-card :body-style="{ padding: '0px' }">
             <img src="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/area-stack.png?_v_=1655181358610"
               class="image">
@@ -47,7 +47,7 @@
           </el-card>
         </a>
 
-        <a href="">
+        <a href="line5">
           <el-card :body-style="{ padding: '0px' }">
             <img src="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/area-stack-gradient.png?_v_=1655181358610"
               class="image">
@@ -58,6 +58,7 @@
         </a>
 
       </div>
+       <el-divider></el-divider>
 
     </div>
   </div>
@@ -86,6 +87,7 @@ a {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  flex-wrap:wrap;
   margin: 20px 0;
 }
 
