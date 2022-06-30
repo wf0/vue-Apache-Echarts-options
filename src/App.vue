@@ -22,16 +22,16 @@
         <!-- <div class="footer"></div> -->
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
 import Header from '@/components/header';
 import Aside from "@/components/aside"
+
 export default {
   name: 'App',
-  components: { Header, Aside, }
+  components: { Header, Aside, },
 }
 </script>
 
