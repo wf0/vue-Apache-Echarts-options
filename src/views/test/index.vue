@@ -73,16 +73,7 @@
                         </el-col>
                     </el-row>
                     <el-row>
-                        <div class="showOption">
-                            <i @click="copyCode" class="el-icon-document-copy"></i>
-                            <i @click="showCode = !showCode" class="el-icon-connection"
-                                :class="{ 'activeI': showCode }"></i>
-                        </div>
-                    </el-row>
-                    <el-row v-if="showCode">
-                        <el-col class="code" :span="24">
-                            <code>{{ option }}</code>
-                        </el-col>
+                        <CopyOption :option="option" />
                     </el-row>
                 </el-tab-pane>
                 <el-tab-pane label="API">
@@ -95,10 +86,11 @@
 
 <script>
 import Title from "@/components/title"
+import CopyOption from '@/components/copy-option'
 import * as echarts from 'echarts';
 export default {
     name: 'test',
-    components: { Title },
+    components: { Title, CopyOption },
     data() {
         return {
             // 使用变量存储
@@ -118,8 +110,6 @@ export default {
             dataView: false,
             restore: false,
             saveAsImage: false,
-            // 这个是是否显示代码的
-            showCode: false,
         }
     },
     watch: {
@@ -229,21 +219,6 @@ export default {
             // 重新绘制统计图
             this.myChart.setOption(JSON.parse(this.option))
         },
-
-        // f复制代码：
-        copyCode() {
-            // window.clipboardData.setData("Text","copyCode");
-            let input = document.createElement('input') // 新增一个input
-            input.style.position = 'relative' // 将它隐藏（注意不能使用display或者visibility，否则粘贴不上）
-            input.style.marginLeft = "-9999px"
-            input.style.zIndex = '-9'
-            document.body.appendChild(input) // 追加
-            input.value = this.option; // 设置文本框的内容
-            input.select() // 选中文本
-            document.execCommand("copy") // 执行浏览器复制命令
-            console.log("复制完成");
-            this.$message.success("复制完成");
-        },
     },
     mounted() {
         this.reWrite();
@@ -286,8 +261,5 @@ export default {
     cursor: pointer;
 }
 
-/* 被激活 */
-.activeI {
-    background-color: #f3f3f3;
-}
+
 </style>

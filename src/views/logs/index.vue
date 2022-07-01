@@ -4,6 +4,16 @@
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px">
       <el-timeline>
+        <!-- 添加新logs直接在此上添加 timeline item 即可 -->
+        <el-timeline-item timestamp="2022-7-1" placement="top" color="green" size="large">
+          <el-card>
+            <h4>Features</h4>
+            <ul>
+              <li>新增 start 进阶教程，意在释义统计图数据处理过程，简单展示两种后端返回数据后，利用JS处理，并应用到统计图中</li>
+              <li>将复制代码功能封装为公共组件，并完善了复制代码成功提示，使用 props 传递配置项到公共组件中</li>
+            </ul>
+          </el-card>
+        </el-timeline-item>
         <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">
           <el-card>
             <h4>Host Fix</h4>
