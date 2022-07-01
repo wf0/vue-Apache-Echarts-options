@@ -35,8 +35,6 @@ export default {
   },
   methods: {
     backTop() {
-      // window.scrollTo(0, 0)
-
       //把内容滚动指定的像素数（第一个参数是向右滚动的像素数，第二个参数是向下滚动的像素数）
       window.scrollBy(0, -100);
       //延时递归调用，模拟滚动向上效果
@@ -105,7 +103,6 @@ export default {
   height: 750px;
   position: fixed;
   width: 20%;
-  /* top: 0%; */
   top: 60px;
 }
 
@@ -113,20 +110,16 @@ export default {
   overflow: auto;
   height: 780px;
   display: none;
-  /* hiden */
 }
 
 .aside {
-  /* flex: 2; */
   width: 20%;
   transition: 0.3s ease-in-out;
-
 }
 
 .main {
   width: 80%;
-  min-height: 100px;
-  /* flex: 7; */
+  min-height: 650px;
   border-left: solid #e7e7e7 1px;
 }
 </style>
