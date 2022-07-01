@@ -2,7 +2,7 @@ import VueRouter from 'vue-router'
 
 const routes = [{
         path: "/",
-        redirect: "/test"
+        redirect: "/help"
     },
     {
         path: '/test', //测试用例(对应左侧导航栏名字)
@@ -160,6 +160,24 @@ const routes = [{
 const router = new VueRouter({
     routes,
     mode: 'history',
+    scrollBehavior(to, from, savedPosition) {
+        // return 期望滚动到哪个的位置
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return {
+                x: 0,
+                y: 0
+            }
+        }
+    }
 });
+// router.beforeEach((to, from, next) => {
+//     console.log(window.scrollY);
+//     // window.scrollY = 0;
+//     next();
+// });
+
+
 
 export default router;

@@ -1,25 +1,17 @@
 <template>
   <div id="app">
-    <!-- 头部 -->
-    <div class="header" style="border-bottom:solid #E7E7E7 1px">
+    <div class="header">
       <Header />
     </div>
-    <!-- 下部主要内容 -->
     <div class="container">
-      <!-- 左侧导航栏 -->
       <div class="aside">
-        <el-scrollbar style="height:800px">
+        <div></div>
+        <el-scrollbar :class="{ 'affix': affix }">
           <Aside />
         </el-scrollbar>
       </div>
-      <!-- 右侧主题内容 -->
-      <div class="mainandfooter">
-        <!-- 上main -->
-        <div class="main">
-          <router-view></router-view>
-        </div>
-        <!-- 下footer -->
-        <!-- <div class="footer"></div> -->
+      <div class="main">
+        <router-view></router-view>
       </div>
     </div>
   </div>
@@ -32,6 +24,18 @@ import Aside from "@/components/aside"
 export default {
   name: 'App',
   components: { Header, Aside, },
+  data() {
+    return {
+      affix: false,
+    }
+  },
+  mounted() {
+    window.onscroll = () => {
+      if (window.scrollY >= 60) this.affix = true;
+      else this.affix = false;
+      console.log(window.scrollY);
+    }
+  },
 }
 </script>
 
@@ -42,35 +46,30 @@ export default {
 }
 
 .header {
-  /* background-color: aliceblue; */
   height: 60px;
+  border-bottom: solid #e6e6e6 1px;
 }
 
 .container {
-  /* background-color: aqua; */
   display: flex;
-  height: 800px;
+}
+
+.affix {
+  overflow: auto;
+  height: 750px;
+  position: fixed;
+  width: 20%;
+  top: 0%;
 }
 
 .aside {
-  background-color: antiquewhite;
-  flex: 2;
-  /* overflow: auto; */
-}
-
-.mainandfooter {
-  flex: 7;
+  /* flex: 2; */
+  width: 20%;
 }
 
 .main {
-  /* background-color: #F3F3F3; */
-  height: 800px;
-  overflow: auto;
-  /* padding: 20px; */
-}
-
-.footer {
-  /* background-color: beige; */
-  height: 20%;
+  width: 80%;
+  /* flex: 7; */
+  border-left: solid #e7e7e7 1px;
 }
 </style>

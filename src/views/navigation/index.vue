@@ -123,6 +123,8 @@
           </el-card>
         </a>
       </div>
+      <el-divider></el-divider>
+
       <h3>柱状图</h3>
       <div class="content">
 

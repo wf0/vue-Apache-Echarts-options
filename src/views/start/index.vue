@@ -156,15 +156,17 @@
           </pre>
         </code>
       </div>
-      <p>5. 较难的是三维数据的处理，如<el-link type="primary" href="https://echarts.apache.org/examples/zh/editor.html?c=mix-line-bar" target="blank">折柱混合</el-link> 。</p>
+      <p>5. 较难的是三维数据的处理，如<el-link type="primary"
+          href="https://echarts.apache.org/examples/zh/editor.html?c=mix-line-bar" target="blank">折柱混合</el-link> 。</p>
       <div class="code">
         <code>
           <pre>
           // 举例说明：【制作师傅的已完成、在维修、评分折柱混合统计图】 => 需要师傅名称、已完成、在维修、评分：
-              // 后端返回的数据： [{ workername: '魏师傅', step: 3, num: 8, score: 7.8 },
-              { workername: '韦师傅', step: 3, num: 8, score: 8.2 },
-              { workername: '魏师傅', step: 4, num: 8, score: 7.8 },
-              { workername: '韦师傅', step: 4, num: 8, score: 8.2 }]
+              // 后端返回的数据： 
+              [ { workername: '魏师傅', step: 3, num: 8, score: 7.8 },
+                { workername: '韦师傅', step: 3, num: 8, score: 8.2 },
+                { workername: '魏师傅', step: 4, num: 8, score: 7.8 },
+                { workername: '韦师傅', step: 4, num: 8, score: 8.2 }]
               
               // 如何分离数据？
               // 1. 初始化数据：
