@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu default-active="help" class="el-menu-vertical-demo" router>
+    <el-menu :default-active="active" class="el-menu-vertical-demo" router>
       <el-menu-item-group>
         <span slot="title">开始</span>
         <el-menu-item index="help">使用帮助</el-menu-item>
@@ -79,13 +79,33 @@
 
 <script>
 export default {
-  methods: {
+  data() {
+    return {
+      active: '',
+    }
   },
+  mounted() {
+    //  获取路由参数： 使用this.$router.currentRoute 在第一次刷新会不存在，因此使用 URL 地址获取
+    /**
+     * 
+     * http://localhost:8080/logs
+     * http://localhost:9000/logs
+     * http://localhost:8080/logs/test
+     * 始终要的最后一个路径
+     */
+    let path = (location.href).split('/')
+    path = path[path.length - 1]
+    this.active = path;
 
+  },
 }
 </script>
 <style scoped>
-.el-menu{
+.el-menu-item{
+  font-weight: 600;
+  font-size: 14px;
+}
+.el-menu {
   /* 取消默认右侧线 */
   border-right: none;
 }

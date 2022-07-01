@@ -23,6 +23,7 @@
               <li>修复 App 首页左侧Aside的布局，并实现动态 Affix</li>
               <li>修复页面无内容时，Aside异常问题</li>
               <li>对页面主体内容的宽度设为 90% ，使得返回顶部按钮显示正常</li>
+              <li>修复 Aside 刷新后的 default-active 失效问题</li>
             </ul>
           </el-card>
         </el-timeline-item>

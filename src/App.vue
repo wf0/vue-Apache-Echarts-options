@@ -35,9 +35,14 @@ export default {
   },
   methods: {
     backTop() {
-      // window.scrollY = 0
-      window.scrollTo(0,0)
+      // window.scrollTo(0, 0)
 
+      //把内容滚动指定的像素数（第一个参数是向右滚动的像素数，第二个参数是向下滚动的像素数）
+      window.scrollBy(0, -100);
+      //延时递归调用，模拟滚动向上效果
+      let scrolldelay = setTimeout(() => { this.backTop() }, 8);
+      //判断当页面到达顶部，取消延时代码（否则页面滚动到顶部会无法再向下正常浏览页面）
+      if (window.scrollY == 0) clearTimeout(scrolldelay);
     },
   },
   mounted() {
@@ -47,7 +52,6 @@ export default {
       if (window.scrollY <= 60) {
         this.top = 60 - window.scrollY;
       }
-
       // 当页面小于某个值时，需要显示 返回顶部 按钮
       if (window.scrollY > 100) this.showBack = true;
       if (window.scrollY <= 100) this.showBack = false;
