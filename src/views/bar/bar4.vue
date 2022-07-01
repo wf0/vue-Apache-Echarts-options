@@ -1,6 +1,6 @@
 <template>
 <div style="padding:20px">
-    <Title>瀑布图（柱状图模拟）</Title>
+    <Title url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/bar-waterfall.png?_v_=1655181358610">瀑布图（柱状图模拟）</Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>

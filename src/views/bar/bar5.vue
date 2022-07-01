@@ -1,6 +1,6 @@
 <template>
 <div style="padding:20px">
-    <Title>折柱混合</Title>
+    <Title url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/mix-line-bar.png?_v_=1655181358610">折柱混合</Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>

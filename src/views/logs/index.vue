@@ -12,6 +12,10 @@
               <li>新增 start 进阶教程，意在释义统计图数据处理过程，简单展示两种后端返回数据后，利用JS处理，并应用到统计图中</li>
               <li>将复制代码功能封装为公共组件，并完善了复制代码成功提示，使用 props 传递配置项到公共组件中</li>
             </ul>
+            <h4>项目开发</h4>
+            <ul>
+              <li>开发 navigation 柱状图及饼图的设计及链接，使用 props 传递图片地址到 title 组件中</li>
+            </ul>
           </el-card>
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">

@@ -1,6 +1,6 @@
 <template>
 <div style="padding:20px">
-    <Title>自定义单个柱子颜色</Title>
+    <Title url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/bar-data-color.png?_v_=1655181358610">自定义单个柱子颜色</Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>
