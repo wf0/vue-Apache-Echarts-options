@@ -2,7 +2,7 @@
   <div style="padding:20px">
     <Title>使用帮助</Title>
     <!-- 先需要使用tabs -->
-    <div style="margin-top:20px">
+    <div class="box">
       <h3>引言</h3>
       <div class="content">
         本工具致力于采用配置式解决用户使用Apache Echarts过程中遇到的想要的效果不知道配置，需要查询官方配置项手册的方式存在的问题。
@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style scoped>
+.box{
+  margin-top:20px;
+  width: 90%;
+}
 .content {
   font-size: 16px;
   font-weight: 500;

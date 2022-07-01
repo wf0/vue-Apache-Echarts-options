@@ -2,7 +2,7 @@
   <div style="padding:20px">
     <Title>更新日志</Title>
     <!-- 先需要使用tabs -->
-    <div style="margin-top:20px">
+    <div class="box">
       <el-timeline>
         <!-- 添加新logs直接在此上添加 timeline item 即可 -->
         <el-timeline-item timestamp="2022-7-1" placement="top" color="green" size="large">
@@ -15,12 +15,14 @@
             <h4>项目开发</h4>
             <ul>
               <li>开发 navigation 柱状图及饼图的设计及链接，使用 props 传递图片地址到 title 组件中</li>
+              <li>新增 back Top 返回顶部功能</li>
             </ul>
             <h4>Host Fix</h4>
             <ul>
               <li>重构了 App 首页的布局方式，解决了scroll左右问题，实现固定钉效果：Affix</li>
               <li>修复 App 首页左侧Aside的布局，并实现动态 Affix</li>
               <li>修复页面无内容时，Aside异常问题</li>
+              <li>对页面主体内容的宽度设为 90% ，使得返回顶部按钮显示正常</li>
             </ul>
           </el-card>
         </el-timeline-item>
@@ -82,6 +84,11 @@ export default {
 </script>
 
 <style scoped>
+.box {
+  margin-top: 20px;
+  width: 90%;
+}
+
 h4 {
   margin: 15px 0;
 }

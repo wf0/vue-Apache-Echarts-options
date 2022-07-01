@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <!-- 回到顶部 -->
+    <div class="back" v-if="showBack" @click="backTop"><i class="el-icon-caret-top"></i></div>
     <div class="header">
       <Header />
     </div>
@@ -27,18 +29,28 @@ export default {
   data() {
     return {
       affix: true,
-      top: 60
+      top: 60,
+      showBack: false,
     }
+  },
+  methods: {
+    backTop() {
+      // window.scrollY = 0
+      window.scrollTo(0,0)
+
+    },
   },
   mounted() {
     window.onscroll = () => {
       // 当能往下滑动时，需要添加动画效果：top  => 0%
-
       //  scrollY从 0 到 60 的区间，top值需要从 60 => 0  px
       if (window.scrollY <= 60) {
         this.top = 60 - window.scrollY;
-        console.log(this.top);
       }
+
+      // 当页面小于某个值时，需要显示 返回顶部 按钮
+      if (window.scrollY > 100) this.showBack = true;
+      if (window.scrollY <= 100) this.showBack = false;
 
     }
   },
@@ -50,6 +62,30 @@ export default {
   padding: 0;
   margin: 0;
 }
+
+/*  返回顶部 */
+.back {
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 35px;
+  z-index: 999;
+}
+
+.back i {
+  color: #409EFF;
+  font-size: 35px;
+  border: solid #e7e7e7 1px;
+  border-radius: 35px;
+}
+
+.back:hover {
+  border: #409EFF solid 1.5px;
+  border-radius: 35px;
+  background-color: #F2F6FC;
+}
+
 
 .header {
   height: 60px;

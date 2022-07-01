@@ -21,5 +21,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.box {
+  margin-top: 20px;
+  width: 90%;
+}
 </style>

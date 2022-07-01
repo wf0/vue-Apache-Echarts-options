@@ -1,6 +1,8 @@
 <template>
   <div style="padding:20px">
-    <Title url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/bar-simple.png?_v_=1655181358610">基础柱状图</Title>
+    <Title
+      url="https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/thumb/bar-simple.png?_v_=1655181358610">
+      基础柱状图</Title>
     <!-- 先需要使用tabs -->
     <div style="margin-top:20px"></div>
   </div>
@@ -16,4 +18,8 @@ export default {
 </script>
 
 <style scoped>
+.box {
+  margin-top: 20px;
+  width: 90%;
+}
 </style>
