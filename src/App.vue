@@ -6,7 +6,7 @@
     <div class="container">
       <div class="aside">
         <div class="empty"></div>
-        <el-scrollbar class="affix" :style="{ top:top+'px' }">
+        <el-scrollbar class="affix" :style="{ top: top + 'px' }">
           <Aside />
         </el-scrollbar>
       </div>

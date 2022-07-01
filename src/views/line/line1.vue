@@ -14,7 +14,7 @@ import Title from "@/components/title"
 import * as echarts from 'echarts';
 export default {
   name: "line1",
-  components: { Title },
+  components: { Title, },
 };
 </script>
 
