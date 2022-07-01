@@ -5,12 +5,12 @@
     </div>
     <div class="container">
       <div class="aside">
-        <div></div>
-        <el-scrollbar :class="{ 'affix': affix }">
+        <div class="empty"></div>
+        <el-scrollbar class="affix" :style="{ top:top+'px' }">
           <Aside />
         </el-scrollbar>
       </div>
-      <div class="main">
+      <div class="main" ref="main">
         <router-view></router-view>
       </div>
     </div>
@@ -26,14 +26,20 @@ export default {
   components: { Header, Aside, },
   data() {
     return {
-      affix: false,
+      affix: true,
+      top: 60
     }
   },
   mounted() {
     window.onscroll = () => {
-      if (window.scrollY >= 60) this.affix = true;
-      else this.affix = false;
-      console.log(window.scrollY);
+      // 当能往下滑动时，需要添加动画效果：top  => 0%
+
+      //  scrollY从 0 到 60 的区间，top值需要从 60 => 0  px
+      if (window.scrollY <= 60) {
+        this.top = 60 - window.scrollY;
+        console.log(this.top);
+      }
+
     }
   },
 }
@@ -59,16 +65,27 @@ export default {
   height: 750px;
   position: fixed;
   width: 20%;
-  top: 0%;
+  /* top: 0%; */
+  top: 60px;
+}
+
+.empty {
+  overflow: auto;
+  height: 780px;
+  display: none;
+  /* hiden */
 }
 
 .aside {
   /* flex: 2; */
   width: 20%;
+  transition: 0.3s ease-in-out;
+
 }
 
 .main {
   width: 80%;
+  min-height: 100px;
   /* flex: 7; */
   border-left: solid #e7e7e7 1px;
 }

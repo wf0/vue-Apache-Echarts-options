@@ -16,6 +16,12 @@
             <ul>
               <li>开发 navigation 柱状图及饼图的设计及链接，使用 props 传递图片地址到 title 组件中</li>
             </ul>
+            <h4>Host Fix</h4>
+            <ul>
+              <li>重构了 App 首页的布局方式，解决了scroll左右问题，实现固定钉效果：Affix</li>
+              <li>修复 App 首页左侧Aside的布局，并实现动态 Affix</li>
+              <li>修复页面无内容时，Aside异常问题</li>
+            </ul>
           </el-card>
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">
