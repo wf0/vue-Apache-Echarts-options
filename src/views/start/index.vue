@@ -169,10 +169,9 @@
                 { workername: '韦师傅', step: 4, num: 8, score: 8.2 }]
               
               // 如何分离数据？
-              // 1. 初始化数据：
+              // 1. 初始化数据(这也是统计图需要的4组数据)：
               let workername = [res.data[0].workername];
               let score = [res.data[0].averagescore];
-              // 获取在维修和已完成的订单数(这个需要根据师傅名检索)
               let waitorder = [];
               let finishorder = [];
 
@@ -184,11 +183,11 @@
                 }
               });
 
-              // 3. 获取在维修和已完成的订单数
+              // 3. 根据师傅名称获取在维修和已完成的订单数
               workername.forEach(name => {
-              let nameArr = []; // 从原始数据中找到该师傅的所有记录
+                let nameArr = []; // 从原始数据中找到该师傅的所有记录
 
-              res.data.forEach(res => {
+                res.data.forEach(res => {
                   if (res.workername == name) nameArr.push(res);
                 });
 
