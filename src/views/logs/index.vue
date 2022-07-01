@@ -11,18 +11,19 @@
             <ul>
               <li>新增 start 进阶教程，意在释义统计图数据处理过程，简单展示两种后端返回数据后，利用JS处理，并应用到统计图中</li>
               <li>将复制代码功能封装为公共组件，并完善了复制代码成功提示，使用 props 传递配置项到公共组件中</li>
-            </ul>
-            <h4>项目开发</h4>
-            <ul>
               <li>开发 navigation 柱状图及饼图的设计及链接，使用 props 传递图片地址到 title 组件中</li>
               <li>新增 back Top 返回顶部功能</li>
+              <li>重构 logs 页面</li>
             </ul>
+          </el-card>
+         
+          <el-card>
             <h4>Host Fix</h4>
             <ul>
               <li>重构了 App 首页的布局方式，解决了scroll左右问题，实现固定钉效果：Affix</li>
               <li>修复 App 首页左侧Aside的布局，并实现动态 Affix</li>
               <li>修复页面无内容时，Aside异常问题</li>
-              <li>对页面主体内容的宽度设为 90% ，使得返回顶部按钮显示正常</li>
+              <li>修复页面主体内容的宽度设为 90% ，使得返回顶部按钮显示正常</li>
               <li>修复 Aside 刷新后的 default-active 失效问题</li>
             </ul>
           </el-card>
@@ -41,7 +42,7 @@
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-30" placement="top" color="green" size="large">
           <el-card>
-            <h4>项目开发</h4>
+            <h4>Develop</h4>
             <ul>
               <li>总结Apache Echarts常用配置项，并提交Github</li>
               <li>完善Header Search搜索框功能</li>
@@ -54,7 +55,7 @@
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-29" placement="top" color="green" size="large">
           <el-card>
-            <h4>项目开发</h4>
+            <h4>Develop</h4>
             <ul>
               <li>zengming 完善左侧导航栏对应的路由和组件创建</li>
               <li>zengming 添加路由组件、配置路由信息 </li>
@@ -63,7 +64,7 @@
         </el-timeline-item>
         <el-timeline-item timestamp="2022-6-28" placement="top" color="green" size="large">
           <el-card>
-            <h4>项目创建</h4>
+            <h4>Create Project</h4>
             <ul>
               <li>项目提交Github</li>
               <li>第一次上传项目文件</li>
@@ -96,5 +97,9 @@ h4 {
 
 li {
   margin: 10px;
+}
+
+.el-card {
+  margin: 10px 0;
 }
 </style>
