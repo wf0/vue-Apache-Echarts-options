@@ -5,6 +5,22 @@
     <div class="box">
       <el-timeline>
         <!-- 添加新logs直接在此上添加 timeline item 即可 -->
+        <el-timeline-item timestamp="2022-7-2" placement="top" color="green" size="large">
+          <el-card>
+            <h4>Host Fix</h4>
+            <ul>
+              <li>修复项目启动时，redirect 重定向路由导致router path为空，不能正常显示 default-active</li>
+              <li>修复 Aside 随屏幕滚动时， height 的显示问题</li>
+            </ul>
+          </el-card>
+
+          <el-card>
+            <h4>Features</h4>
+            <ul>
+              <li>开发 line 统计图的配置项、watch 监听、重绘方法</li>
+            </ul>
+          </el-card>
+        </el-timeline-item>
         <el-timeline-item timestamp="2022-7-1" placement="top" color="green" size="large">
           <el-card>
             <h4>Features</h4>
@@ -16,7 +32,7 @@
               <li>重构 logs 页面</li>
             </ul>
           </el-card>
-         
+
           <el-card>
             <h4>Host Fix</h4>
             <ul>

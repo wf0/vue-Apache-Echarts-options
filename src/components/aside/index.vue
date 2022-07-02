@@ -95,16 +95,16 @@ export default {
      */
     let path = (location.href).split('/')
     path = path[path.length - 1]
-    this.active = path;
-
+    this.active = path === "" ? 'help' : path;
   },
 }
 </script>
 <style scoped>
-.el-menu-item{
+.el-menu-item {
   font-weight: 600;
   font-size: 14px;
 }
+
 .el-menu {
   /* 取消默认右侧线 */
   border-right: none;

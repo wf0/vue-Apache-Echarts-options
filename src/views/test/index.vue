@@ -228,9 +228,10 @@ export default {
 
 <style scoped>
 .box {
-  margin-top: 20px;
-  width: 90%;
+    margin-top: 20px;
+    width: 90%;
 }
+
 .border-left {
     border-left: solid #e6e6e6 1px;
 }
@@ -263,6 +264,4 @@ export default {
     font-size: 20px;
     cursor: pointer;
 }
-
-
 </style>

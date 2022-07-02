@@ -8,7 +8,7 @@
     <div class="container">
       <div class="aside">
         <div class="empty"></div>
-        <el-scrollbar class="affix" :style="{ top: top + 'px' }">
+        <el-scrollbar class="affix" :style="{ top: top + 'px', height: height + 'px' }">
           <Aside />
         </el-scrollbar>
       </div>
@@ -31,6 +31,7 @@ export default {
       affix: true,
       top: 60,
       showBack: false,
+      height: 665
     }
   },
   methods: {
@@ -49,7 +50,12 @@ export default {
       //  scrollY从 0 到 60 的区间，top值需要从 60 => 0  px
       if (window.scrollY <= 60) {
         this.top = 60 - window.scrollY;
+        this.height = 665
       }
+      if (window.scrollY > 60) {
+        this.height = 725
+      }
+
       // 当页面小于某个值时，需要显示 返回顶部 按钮
       if (window.scrollY > 100) this.showBack = true;
       if (window.scrollY <= 100) this.showBack = false;
@@ -99,8 +105,7 @@ export default {
 }
 
 .affix {
-  overflow: auto;
-  height: 750px;
+  height: 650px;
   position: fixed;
   width: 20%;
   top: 60px;
@@ -108,18 +113,19 @@ export default {
 
 .empty {
   overflow: auto;
-  height: 780px;
+  height: 650px;
   display: none;
 }
 
 .aside {
   width: 20%;
+  height: 650px;
   transition: 0.3s ease-in-out;
 }
 
 .main {
   width: 80%;
-  min-height: 650px;
+  min-height: 740px;
   border-left: solid #e7e7e7 1px;
 }
 </style>
